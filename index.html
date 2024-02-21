@@ -18,11 +18,111 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
 
+    <!-- fonts awesome link -->
+    <script src="https://kit.fontawesome.com/6b8c535780.js" crossorigin="anonymous"></script>
+
 </head>
 
-<body>
-    <main>
-        <h1 class="font-bold">the name of our country is bangladesh!</h1>
+<body class="font-poppin">
+    <main class=" min-h-screen bg-[#1E1E1E] bg-[url('./images/background.png')] bg-no-repeat bg-center">
+        <!-- HOME SECTION -->
+        <section class="home hidden">
+            <div class=" min-h-screen flex gap-10 flex-col justify-center items-center">
+                <h3 class="text-white text-9xl font-bold">ALPHABET CLASH</h3>
+                <p class="font-medium text-2xl text-white">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <button class="bg-white font-semibold text-2xl py-5 px-8 rounded-xl">Play Now</button>
+            </div>
+        </section>
+
+        <!-- PLAYGROUND SECTION -->
+        <section class="playground relative ">
+            <div class="flex justify-center absolute left-[34%] top-16">
+                <p class=" w-[500px] text-center rounded-b-xl bg-[#010313CC] text-white text-lg font-medium">
+                    Don't watch keyboard while playing...
+                </p>
+            </div>
+
+            <!-- screen -->
+            <div class="flex flex-col items-center justify-center pt-16">
+
+                <div
+                    class="artboard artboard-horizontal phone-6 border-8 rounded-xl border-[#010313CC] bg-[#ffffffB3] flex justify-center items-center">
+                    <p class="font-semibold text-9xl">A</p>
+                </div>
+            </div>
+
+            <!-- keybord -->
+            <div class="py-16">
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd class="kbd">q</kbd>
+                    <kbd class="kbd">w</kbd>
+                    <kbd class="kbd">e</kbd>
+                    <kbd class="kbd">r</kbd>
+                    <kbd class="kbd">t</kbd>
+                    <kbd class="kbd">y</kbd>
+                    <kbd class="kbd">u</kbd>
+                    <kbd class="kbd">i</kbd>
+                    <kbd class="kbd">o</kbd>
+                    <kbd class="kbd">p</kbd>
+                </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd class="kbd">a</kbd>
+                    <kbd class="kbd">s</kbd>
+                    <kbd class="kbd">d</kbd>
+                    <kbd class="kbd">f</kbd>
+                    <kbd class="kbd">g</kbd>
+                    <kbd class="kbd">h</kbd>
+                    <kbd class="kbd">j</kbd>
+                    <kbd class="kbd">k</kbd>
+                    <kbd class="kbd">l</kbd>
+                </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd class="kbd">z</kbd>
+                    <kbd class="kbd">x</kbd>
+                    <kbd class="kbd">c</kbd>
+                    <kbd class="kbd">v</kbd>
+                    <kbd class="kbd">b</kbd>
+                    <kbd class="kbd">n</kbd>
+                    <kbd class="kbd">m</kbd>
+                    <kbd class="kbd">/</kbd>
+                </div>
+            </div>
+
+            <!-- score and life -->
+            <div class=" flex justify-around">
+                <div class="">
+                    <h1 class="text-white space-x-3 bg-[#894189] rounded-3xl text-center py-3 w-[160px]">
+                        <span>Life</span>
+                        <span><i class="fa-solid fa-heart"></i></span>
+                        <span>0</span>
+                    </h1>
+                </div>
+
+                <div class="">
+                    <h1 class="text-white space-x-3 bg-[#360490] rounded-3xl text-center py-3 w-[160px]">
+                        <span>Score</span>
+                        <span><i class="fa-brands fa-centos"></i></span>
+                        <span>0</span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCORE SECTION -->
+        <section class="hidden">
+            <div class="min-h-screen flex justify-center items-center">
+                <div class="w-[380px] bg-gradient-to-r from-indigo-500 to-blue-600 rounded-3xl flex flex-col items-center space-y-3 py-5">
+                    <h1 class="text-white font-medium text-6xl">
+                        <span>Score :</span>
+                        <span>16</span>
+                    </h1>
+                    <button class="bg-white font-semibold text-2xl py-3 px-8 rounded-xl">Play Now</button>
+                    <p class="text-white">Practice will make you Pro</p>
+                </div>
+            </div>
+        </section>
+
+
     </main>
 
 </body>
