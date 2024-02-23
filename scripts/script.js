@@ -16,14 +16,14 @@ function setBgColor() {
     const alphabets = document.getElementById("screen-text").innerText;
     const alphabet = alphabets.toLowerCase();
 
-    document.getElementById(alphabet).classList.add("bg-red-300");
+    document.getElementById(alphabet).classList.add("bg-green-400");
 }
 
 function removeBgColor() {
     const alphabets = document.getElementById("screen-text").innerText;
     const alphabet = alphabets.toLowerCase();
 
-    document.getElementById(alphabet).classList.remove("bg-red-300");
+    document.getElementById(alphabet).classList.remove("bg-green-400");
 }
 
 function setRandomAlphabets() {
@@ -53,6 +53,8 @@ document.getElementById("play-now").addEventListener("click", function () {
 document.addEventListener("keyup", function handleKeybordEvent(event) {
 
     const pressedKey = event.key.toUpperCase();
+
+
     const expectedKey = findElementById("screen-text").innerText;
     // console.log(pressedKey);
 
@@ -67,6 +69,10 @@ document.addEventListener("keyup", function handleKeybordEvent(event) {
         removeBgColor();
         setRandomAlphabets();
     }
+    else if (pressedKey === "ESCAPE") {
+        findElementById("play-ground").classList.add("hidden");
+        findElementById("score-section").classList.remove("hidden");
+    }
     else {
         let gameLife = parseInt(findElementById("life").innerText);
         gameLife = gameLife - 1;
@@ -77,7 +83,7 @@ document.addEventListener("keyup", function handleKeybordEvent(event) {
             const finalScore = findElementById("score").innerText;
             // let finalScoreContainer = findElementById("view-score").innerText;
             findElementById("view-score").innerText = finalScore;
-        
+
             const playgroundSection = findElementById("play-ground");
             playgroundSection.classList.add("hidden");
 
@@ -92,7 +98,7 @@ document.addEventListener("keyup", function handleKeybordEvent(event) {
 
 
 
-document.getElementById("play-now-again").addEventListener("click", function(){
+document.getElementById("play-now-again").addEventListener("click", function () {
     findElementById("score-section").classList.add("hidden");
     findElementById("play-ground").classList.remove("hidden");
 
